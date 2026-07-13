@@ -6,6 +6,14 @@ import serviceTapetes from "@/assets/service-tapetes.jpg";
 import serviceBoiserie from "@/assets/service-boiserie.jpg";
 import serviceCabeceiras from "@/assets/service-cabeceiras.jpg";
 
+import videoCortinas from "@/assets/service-cortinas.mp4.asset.json";
+import videoPersianas from "@/assets/service-persianas.mp4.asset.json";
+import videoToldos from "@/assets/service-toldos.mp4.asset.json";
+import videoPapeis from "@/assets/service-papeis.mp4.asset.json";
+import videoTapetes from "@/assets/service-tapetes.mp4.asset.json";
+import videoBoiserie from "@/assets/service-boiserie.mp4.asset.json";
+import videoCabeceiras from "@/assets/service-cabeceiras.mp4.asset.json";
+
 export interface ServiceFAQ {
   question: string;
   answer: string;
@@ -23,6 +31,7 @@ export interface Service {
   heroTitle: string;
   intro: string;
   image: string;
+  video: string;
   benefits: string[];
   applications: string[];
   options: ServiceOption[];
