@@ -47,7 +47,7 @@
   --color-surface-soft: var(--surface-soft);
   --color-surface-warm: var(--surface-warm);
 
-  --font-display: "Bodoni Moda", "Didot", "Cormorant Garamond", "Georgia", serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -115,13 +115,13 @@
   h3 {
     font-family: var(--font-display);
     font-weight: 800;
-    letter-spacing: -0.025em;
-    font-optical-sizing: auto;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
   }
 
   h1 {
-    font-weight: 900;
-    letter-spacing: -0.035em;
+    font-weight: 800;
+    letter-spacing: -0.045em;
   }
 
   ::selection {
