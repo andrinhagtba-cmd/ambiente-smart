@@ -9,13 +9,13 @@ export const Route = createFileRoute("/servicos/")({
   component: ServicosPage,
   head: () => ({
     meta: [
-      { title: "Cortinas, Persianas e Soluções para Interiores | Will Decor" },
+      { title: "Cortinas, Persianas e Soluções para Interiores | Ambiente Smart" },
       {
         name: "description",
         content:
-          "Conheça as soluções sob medida da Will Decor: cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras. Solicite um orçamento.",
+          "Conheça as soluções sob medida da Ambiente Smart: cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras. Solicite um orçamento.",
       },
-      { property: "og:title", content: "Cortinas, Persianas e Soluções para Interiores | Will Decor" },
+      { property: "og:title", content: "Cortinas, Persianas e Soluções para Interiores | Ambiente Smart" },
       {
         property: "og:description",
         content: "Soluções sob medida para janelas, paredes e ambientes residenciais e comerciais.",
@@ -51,7 +51,7 @@ function ServicosPage() {
               >
                 <img
                   src={service.image}
-                  alt={`${service.name} — Will Decor`}
+                  alt={`${service.name} — Ambiente Smart`}
                   loading="lazy"
                   width={1024}
                   height={1280}

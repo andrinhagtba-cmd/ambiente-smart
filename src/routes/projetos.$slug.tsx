@@ -16,8 +16,8 @@ export const Route = createFileRoute("/projetos/$slug")({
   },
   head: ({ params }) => {
     const project = getProjectBySlug(params.slug);
-    if (!project) return { meta: [{ title: "Projeto não encontrado | Will Decor" }] };
-    const title = `${project.name} | Projetos Will Decor`;
+    if (!project) return { meta: [{ title: "Projeto não encontrado | Ambiente Smart" }] };
+    const title = `${project.name} | Projetos Ambiente Smart`;
     return {
       meta: [
         { title },

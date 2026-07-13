@@ -20,13 +20,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Will Decor | Cortinas e Soluções Sob Medida em Brasília" },
+      { title: "Ambiente Smart | Cortinas e Soluções Sob Medida em Brasília" },
       {
         name: "description",
         content:
           "Cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras sob medida em Brasília. Solicite um orçamento com atendimento consultivo.",
       },
-      { property: "og:title", content: "Will Decor | Cortinas e Soluções Sob Medida em Brasília" },
+      { property: "og:title", content: "Ambiente Smart | Cortinas e Soluções Sob Medida em Brasília" },
       {
         property: "og:description",
         content: "Soluções de decoração sob medida com curadoria de materiais e instalação profissional.",
@@ -88,7 +88,7 @@ function Index() {
       <VideoHero />
 
       {/* Faixa de confiança */}
-      <section aria-label="Diferenciais da Will Decor" className="border-b border-border bg-cream">
+      <section aria-label="Diferenciais da Ambiente Smart" className="border-b border-border bg-cream">
         <div className="container-site">
           <ul className="grid grid-cols-2 divide-border sm:divide-x lg:grid-cols-4">
             {TRUST_ITEMS.map(({ icon: Icon, label }) => (
@@ -107,7 +107,7 @@ function Index() {
       <section className="container-site grid items-center gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
         <div>
           <SectionHeading
-            eyebrow="Sobre a Will Decor"
+            eyebrow="Sobre a Ambiente Smart"
             title="Beleza sob medida para viver melhor."
             description="Cada ambiente possui uma luz, uma rotina e uma personalidade. Criamos soluções que respeitam essas particularidades e valorizam cada espaço — do primeiro traço à instalação."
           />
@@ -132,7 +132,7 @@ function Index() {
           />
           <img
             src={aboutDetail}
-            alt="Detalhe da textura de linho de uma cortina Will Decor"
+            alt="Detalhe da textura de linho de uma cortina Ambiente Smart"
             loading="lazy"
             width={900}
             height={900}
@@ -282,7 +282,7 @@ function Index() {
         </Reveal>
         <div className="order-1 lg:order-2">
           <SectionHeading
-            eyebrow="Por que a Will Decor"
+            eyebrow="Por que a Ambiente Smart"
             title="Cuidado em cada etapa, dos materiais ao acabamento."
           />
           <ul className="mt-10 grid gap-x-8 gap-y-4 sm:grid-cols-2">

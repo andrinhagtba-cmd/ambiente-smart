@@ -75,21 +75,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Will Decor | Cortinas e Soluções Sob Medida em Brasília" },
+      { title: "Ambiente Smart | Cortinas e Soluções Sob Medida em Brasília" },
       {
         name: "description",
         content:
           "Cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras sob medida em Brasília. Atendimento consultivo e instalação profissional.",
       },
-      { name: "author", content: "Will Decor" },
-      { property: "og:title", content: "Will Decor | Cortinas e Soluções Sob Medida em Brasília" },
+      { name: "author", content: "Ambiente Smart" },
+      { property: "og:title", content: "Ambiente Smart | Cortinas e Soluções Sob Medida em Brasília" },
       {
         property: "og:description",
         content:
           "Soluções de decoração sob medida com curadoria de materiais, atendimento consultivo e instalação profissional.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Will Decor" },
+      { property: "og:site_name", content: "Ambiente Smart" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

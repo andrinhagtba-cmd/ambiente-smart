@@ -13,7 +13,7 @@ export function ServiceCard({ service }: { service: Service }) {
       <div className="relative isolate overflow-hidden rounded-[1.75rem] bg-secondary shadow-[0_20px_60px_-30px_oklch(0.185_0.008_70/0.35)] ring-1 ring-border/70 transition-all duration-500 ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_40px_90px_-30px_oklch(0.185_0.008_70/0.55)] group-hover:ring-taupe/60">
         <img
           src={service.image}
-          alt={`${service.name} — ambiente decorado pela Will Decor`}
+          alt={`${service.name} — ambiente decorado pela Ambiente Smart`}
           loading="lazy"
           width={1024}
           height={1280}

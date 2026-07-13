@@ -10,13 +10,13 @@ export const Route = createFileRoute("/orcamento")({
   component: OrcamentoPage,
   head: () => ({
     meta: [
-      { title: "Solicitar Orçamento | Will Decor" },
+      { title: "Solicitar Orçamento | Ambiente Smart" },
       {
         name: "description",
         content:
           "Solicite um orçamento de cortinas, persianas, toldos e soluções sob medida. Conte sobre o seu projeto e receba um atendimento consultivo.",
       },
-      { property: "og:title", content: "Solicitar Orçamento | Will Decor" },
+      { property: "og:title", content: "Solicitar Orçamento | Ambiente Smart" },
       { property: "og:description", content: "Conte um pouco sobre o seu projeto e fale com um especialista." },
       { property: "og:url", content: "/orcamento" },
     ],

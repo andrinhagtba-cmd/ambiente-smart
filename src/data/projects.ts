@@ -33,7 +33,7 @@ export interface Project {
 
 /**
  * Projetos de demonstração com imagens ilustrativas.
- * SUBSTITUIR pelas fotos e descrições de projetos reais da Will Decor.
+ * SUBSTITUIR pelas fotos e descrições de projetos reais da Ambiente Smart.
  */
 export const PROJECTS: Project[] = [
   {

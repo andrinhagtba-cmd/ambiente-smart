@@ -96,7 +96,7 @@ export const SERVICES: Service[] = [
           "Sim. A instalação é realizada por equipe própria, com cuidado com o acabamento e limpeza do ambiente ao final.",
       },
     ],
-    seoTitle: "Cortinas Sob Medida em Brasília | Will Decor",
+    seoTitle: "Cortinas Sob Medida em Brasília | Ambiente Smart",
     seoDescription:
       "Cortinas sob medida em Brasília: linho, blackout, wave e motorizadas. Medição, curadoria de tecidos e instalação profissional. Solicite um orçamento.",
     hasMotorization: true,
@@ -150,7 +150,7 @@ export const SERVICES: Service[] = [
           "Na maior parte dos modelos, a manutenção é simples: pano seco ou aspirador com bocal macio. Orientamos os cuidados específicos de cada material na entrega.",
       },
     ],
-    seoTitle: "Persianas Sob Medida em Brasília | Will Decor",
+    seoTitle: "Persianas Sob Medida em Brasília | Ambiente Smart",
     seoDescription:
       "Persianas sob medida em Brasília: rolô, romana, madeira, double vision e motorizadas. Atendimento consultivo e instalação profissional. Solicite um orçamento.",
     hasMotorization: true,
@@ -202,7 +202,7 @@ export const SERVICES: Service[] = [
           "Sim. A visita técnica verifica o tipo de fixação, o vão e a incidência solar para propor a solução adequada.",
       },
     ],
-    seoTitle: "Toldos Sob Medida em Brasília | Will Decor",
+    seoTitle: "Toldos Sob Medida em Brasília | Ambiente Smart",
     seoDescription:
       "Toldos sob medida em Brasília: retráteis, fixos, verticais e motorizados para varandas, terraços e fachadas. Solicite uma avaliação para o seu projeto.",
     hasMotorization: true,
@@ -254,7 +254,7 @@ export const SERVICES: Service[] = [
           "Sim. Levamos amostras e catálogos e orientamos a escolha considerando iluminação, mobiliário e a atmosfera desejada.",
       },
     ],
-    seoTitle: "Papéis de Parede em Brasília | Will Decor",
+    seoTitle: "Papéis de Parede em Brasília | Ambiente Smart",
     seoDescription:
       "Papéis de parede em Brasília com curadoria de texturas e aplicação profissional. Transforme salas, quartos e lavabos. Solicite um orçamento.",
   },
@@ -304,7 +304,7 @@ export const SERVICES: Service[] = [
         answer: "Sim. A entrega inclui o posicionamento correto no ambiente e orientações de conservação.",
       },
     ],
-    seoTitle: "Tapetes Sob Medida em Brasília | Will Decor",
+    seoTitle: "Tapetes Sob Medida em Brasília | Ambiente Smart",
     seoDescription:
       "Tapetes sob medida em Brasília: fibras naturais, lã e fios técnicos em medidas exatas para o seu ambiente. Solicite um orçamento.",
   },
@@ -355,7 +355,7 @@ export const SERVICES: Service[] = [
           "Não. A aplicação é limpa e relativamente rápida; a etapa de pintura é combinada conforme o projeto.",
       },
     ],
-    seoTitle: "Boiserie em Brasília | Will Decor",
+    seoTitle: "Boiserie em Brasília | Ambiente Smart",
     seoDescription:
       "Boiserie em Brasília: molduras e painéis sob medida com desenho proporcional ao ambiente e acabamento refinado. Solicite um orçamento.",
   },
@@ -405,7 +405,7 @@ export const SERVICES: Service[] = [
           "Sim. É comum compor cabeceira, cortinas e boiserie no mesmo projeto, garantindo harmonia de tons e materiais.",
       },
     ],
-    seoTitle: "Cabeceiras Sob Medida em Brasília | Will Decor",
+    seoTitle: "Cabeceiras Sob Medida em Brasília | Ambiente Smart",
     seoDescription:
       "Cabeceiras estofadas sob medida em Brasília: desenho exclusivo, curadoria de tecidos e instalação profissional. Solicite um orçamento.",
   },

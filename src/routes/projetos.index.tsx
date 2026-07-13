@@ -11,13 +11,13 @@ export const Route = createFileRoute("/projetos/")({
   component: ProjetosPage,
   head: () => ({
     meta: [
-      { title: "Projetos de Decoração Sob Medida | Will Decor" },
+      { title: "Projetos de Decoração Sob Medida | Ambiente Smart" },
       {
         name: "description",
         content:
-          "Galeria de projetos da Will Decor: salas, quartos, escritórios, varandas e ambientes comerciais transformados com soluções sob medida.",
+          "Galeria de projetos da Ambiente Smart: salas, quartos, escritórios, varandas e ambientes comerciais transformados com soluções sob medida.",
       },
-      { property: "og:title", content: "Projetos de Decoração Sob Medida | Will Decor" },
+      { property: "og:title", content: "Projetos de Decoração Sob Medida | Ambiente Smart" },
       { property: "og:description", content: "Ambientes transformados nos detalhes com soluções sob medida." },
       { property: "og:url", content: "/projetos" },
     ],

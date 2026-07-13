@@ -9,14 +9,14 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 function Logo({ light }: { light: boolean }) {
   return (
-    <Link to="/" aria-label="Will Decor — página inicial" className="flex items-baseline gap-2">
+    <Link to="/" aria-label="Ambiente Smart — página inicial" className="flex items-baseline gap-2">
       <span
         className={cn(
           "font-display text-[1.55rem] leading-none tracking-[0.02em]",
           light ? "text-cream" : "text-foreground",
         )}
       >
-        Will
+        Ambiente
       </span>
       <span
         className={cn(
@@ -24,7 +24,7 @@ function Logo({ light }: { light: boolean }) {
           light ? "text-cream/80" : "text-taupe",
         )}
       >
-        Decor
+        Smart
       </span>
     </Link>
   );
