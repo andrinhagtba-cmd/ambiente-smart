@@ -21,8 +21,8 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <p className="flex items-baseline gap-2">
-              <span className="font-display text-3xl">Will</span>
-              <span className="text-sm font-semibold uppercase tracking-[0.34em] text-bronze">Decor</span>
+              <span className="font-display text-3xl">Ambiente</span>
+              <span className="text-sm font-semibold uppercase tracking-[0.34em] text-bronze">Smart</span>
             </p>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink-muted">
               Soluções de decoração sob medida, com curadoria de materiais, atendimento consultivo e instalação
