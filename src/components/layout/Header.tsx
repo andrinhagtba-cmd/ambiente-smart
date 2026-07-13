@@ -1,11 +1,12 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Instagram, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MAIN_NAV } from "@/data/navigation";
 import { SERVICES } from "@/data/services";
-import { CONTACT_PHONE_DISPLAY } from "@/data/brand";
+import { CONTACT_PHONE_DISPLAY, INSTAGRAM_URL } from "@/data/brand";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import menuBg from "@/assets/motorized.jpg";
 
 function Logo({ light }: { light: boolean }) {
   return (
