@@ -5,8 +5,8 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
 import { QuoteCTA } from "@/components/shared/QuoteCTA";
 import { ProjectCard } from "@/components/shared/ProjectCard";
-import { PROJECTS, getProjectBySlug } from "@/data/projects";
-import { getServiceBySlug } from "@/data/services";
+import { PROJECTS, getProjectBySlug, type Project } from "@/data/projects";
+import { getServiceBySlug, type Service } from "@/data/services";
 
 export const Route = createFileRoute("/projetos/$slug")({
   loader: ({ params }) => {
@@ -46,11 +46,11 @@ function ProjectNotFound() {
 }
 
 function ProjetoPage() {
-  const project = Route.useLoaderData();
+  const project = Route.useLoaderData() as Project;
   const others = PROJECTS.filter((p) => p.slug !== project.slug).slice(0, 3);
   const relatedServices = project.serviceSlugs
-    .map((slug) => getServiceBySlug(slug))
-    .filter((s): s is NonNullable<typeof s> => Boolean(s));
+    .map((slug: string) => getServiceBySlug(slug))
+    .filter((s): s is Service => Boolean(s));
 
   return (
     <>

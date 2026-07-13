@@ -7,7 +7,7 @@ import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
 import { QuoteCTA } from "@/components/shared/QuoteCTA";
 import { ServiceCard } from "@/components/shared/ServiceCard";
-import { SERVICES, getServiceBySlug } from "@/data/services";
+import { SERVICES, getServiceBySlug, type Service } from "@/data/services";
 import { PROJECTS } from "@/data/projects";
 import { ProjectCard } from "@/components/shared/ProjectCard";
 
@@ -73,7 +73,7 @@ function ServiceNotFound() {
 }
 
 function ServicoPage() {
-  const service = Route.useLoaderData();
+  const service = Route.useLoaderData() as Service;
   const related = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
   const relatedProjects = PROJECTS.filter((p) => p.serviceSlugs.includes(service.slug)).slice(0, 3);
 
