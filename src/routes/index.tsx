@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Ambiente Smart | Cortinas e Soluções Sob Medida em Brasília" },
       {
         property: "og:description",
-        content: "Soluções de decoração sob medida com curadoria de materiais e instalação profissional.",
+        content: "Cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras sob medida em Brasília. Solicite um orçamento com atendimento consultivo.",
       },
       { property: "og:url", content: "/" },
     ],

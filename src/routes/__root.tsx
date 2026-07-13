@@ -79,18 +79,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras sob medida em Brasília. Atendimento consultivo e instalação profissional.",
+          "Cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras sob medida em Brasília. Solicite um orçamento com atendimento consultivo.",
       },
       { name: "author", content: "Ambiente Smart" },
       { property: "og:title", content: "Ambiente Smart | Cortinas e Soluções Sob Medida em Brasília" },
       {
         property: "og:description",
         content:
-          "Soluções de decoração sob medida com curadoria de materiais, atendimento consultivo e instalação profissional.",
+          "Cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras sob medida em Brasília. Solicite um orçamento com atendimento consultivo.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Ambiente Smart" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Ambiente Smart | Cortinas e Soluções Sob Medida em Brasília" },
+      { name: "twitter:description", content: "Cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras sob medida em Brasília. Solicite um orçamento com atendimento consultivo." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ac2545e-08f4-40cd-8ccb-af471a7b4b9b/id-preview-7f69a9ef--590e00e1-eb9c-4bfb-93ec-8d8fc1fcc1b3.lovable.app-1783928185017.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8ac2545e-08f4-40cd-8ccb-af471a7b4b9b/id-preview-7f69a9ef--590e00e1-eb9c-4bfb-93ec-8d8fc1fcc1b3.lovable.app-1783928185017.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
