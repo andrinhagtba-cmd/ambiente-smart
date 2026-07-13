@@ -135,15 +135,30 @@ function ServicoPage() {
       <section className="bg-cream py-20 md:py-28">
         <div className="container-site">
           <SectionHeading eyebrow="Opções e variações" title="Possibilidades para o seu projeto." align="center" />
-          <ul className="mt-12 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {service.options.map((option, i) => (
-              <Reveal as="li" key={option.name} delay={(i % 3) * 80} className="bg-background p-7">
-                <h3 className="font-display text-xl text-foreground">{option.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{option.description}</p>
+              <Reveal
+                as="li"
+                key={option.name}
+                delay={(i % 3) * 80}
+                className="group relative overflow-hidden rounded-[1.5rem] border border-border/70 bg-background p-7 shadow-[0_16px_40px_-28px_oklch(0.185_0.008_70/0.3)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-bronze/50 hover:shadow-[0_30px_60px_-28px_oklch(0.185_0.008_70/0.4)]"
+              >
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -right-8 -top-8 size-32 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
+                  style={{ background: "oklch(0.645 0.062 70 / 0.3)" }}
+                />
+                <div className="relative">
+                  <span className="inline-flex size-9 items-center justify-center rounded-full bg-surface-warm text-[0.7rem] font-bold tabular-nums text-ink transition-colors group-hover:bg-bronze group-hover:text-ink-foreground">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-5 font-display text-xl font-bold text-foreground">{option.name}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{option.description}</p>
+                </div>
               </Reveal>
             ))}
           </ul>
-          <p className="mx-auto mt-8 max-w-xl text-center text-xs text-muted-foreground">
+          <p className="mx-auto mt-10 max-w-xl text-center text-xs text-muted-foreground">
             Os valores são apresentados somente em orçamento, após a avaliação do ambiente e das medidas.
           </p>
         </div>
@@ -159,22 +174,36 @@ function ServicoPage() {
               title="Duas formas de viver a mesma solução."
               align="center"
             />
-            <div className="mx-auto mt-12 grid max-w-4xl gap-px overflow-hidden border border-ink-foreground/15 bg-ink-foreground/15 md:grid-cols-2">
-              <Reveal className="bg-ink-soft p-8 md:p-10">
-                <Hand className="size-5 text-bronze" aria-hidden="true" strokeWidth={1.5} />
-                <h3 className="mt-4 font-display text-2xl text-ink-foreground">Acionamento manual</h3>
+            <div className="mx-auto mt-14 grid max-w-4xl gap-5 md:grid-cols-2">
+              <Reveal className="group relative overflow-hidden rounded-[1.75rem] border border-ink-foreground/10 bg-ink-soft/80 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-bronze/40 md:p-10">
+                <div className="flex size-12 items-center justify-center rounded-2xl bg-ink-foreground/10 text-bronze">
+                  <Hand className="size-5" aria-hidden strokeWidth={1.6} />
+                </div>
+                <h3 className="mt-6 font-display text-2xl font-bold text-ink-foreground">Acionamento manual</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                   Simples e silencioso, com deslizamento suave pelo trilho ou baqueta. Uma escolha durável e de fácil
                   manutenção para o dia a dia.
                 </p>
               </Reveal>
-              <Reveal delay={100} className="bg-ink-soft p-8 md:p-10">
-                <Settings2 className="size-5 text-bronze" aria-hidden="true" strokeWidth={1.5} />
-                <h3 className="mt-4 font-display text-2xl text-ink-foreground">Acionamento motorizado</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                  Abertura e fechamento por controle remoto, ideal para grandes vãos, janelas altas e rotinas práticas.
-                  A integração com sistemas de automação pode ser avaliada conforme a solução escolhida.
-                </p>
+              <Reveal
+                delay={100}
+                className="group relative overflow-hidden rounded-[1.75rem] border border-bronze/30 bg-gradient-to-br from-ink-soft to-primary/60 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 md:p-10"
+              >
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -right-12 -top-12 size-48 rounded-full opacity-60 blur-3xl"
+                  style={{ background: "oklch(0.645 0.062 70 / 0.55)" }}
+                />
+                <div className="relative">
+                  <div className="flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br from-bronze to-primary text-ink-foreground shadow-lg">
+                    <Settings2 className="size-5" aria-hidden strokeWidth={1.6} />
+                  </div>
+                  <h3 className="mt-6 font-display text-2xl font-bold text-ink-foreground">Acionamento motorizado</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink-muted">
+                    Abertura e fechamento por controle remoto, ideal para grandes vãos, janelas altas e rotinas
+                    práticas. A integração com sistemas de automação pode ser avaliada conforme a solução escolhida.
+                  </p>
+                </div>
               </Reveal>
             </div>
           </div>
