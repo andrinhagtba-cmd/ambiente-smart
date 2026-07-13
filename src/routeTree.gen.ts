@@ -10,6 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as OrcamentoRouteImport } from './routes/orcamento'
+import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicosIndexRouteImport } from './routes/servicos.index'
 import { Route as ProjetosIndexRouteImport } from './routes/projetos.index'
@@ -19,6 +22,21 @@ import { Route as ProjetosSlugRouteImport } from './routes/projetos.$slug'
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrcamentoRoute = OrcamentoRouteImport.update({
+  id: '/orcamento',
+  path: '/orcamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadoRoute = ObrigadoRouteImport.update({
+  id: '/obrigado',
+  path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -49,6 +67,9 @@ const ProjetosSlugRoute = ProjetosSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/obrigado': typeof ObrigadoRoute
+  '/orcamento': typeof OrcamentoRoute
   '/sobre': typeof SobreRoute
   '/projetos/$slug': typeof ProjetosSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -57,6 +78,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/obrigado': typeof ObrigadoRoute
+  '/orcamento': typeof OrcamentoRoute
   '/sobre': typeof SobreRoute
   '/projetos/$slug': typeof ProjetosSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -66,6 +90,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/obrigado': typeof ObrigadoRoute
+  '/orcamento': typeof OrcamentoRoute
   '/sobre': typeof SobreRoute
   '/projetos/$slug': typeof ProjetosSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -76,6 +103,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/contato'
+    | '/obrigado'
+    | '/orcamento'
     | '/sobre'
     | '/projetos/$slug'
     | '/servicos/$slug'
@@ -84,6 +114,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/contato'
+    | '/obrigado'
+    | '/orcamento'
     | '/sobre'
     | '/projetos/$slug'
     | '/servicos/$slug'
@@ -92,6 +125,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/contato'
+    | '/obrigado'
+    | '/orcamento'
     | '/sobre'
     | '/projetos/$slug'
     | '/servicos/$slug'
@@ -101,6 +137,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
+  ObrigadoRoute: typeof ObrigadoRoute
+  OrcamentoRoute: typeof OrcamentoRoute
   SobreRoute: typeof SobreRoute
   ProjetosSlugRoute: typeof ProjetosSlugRoute
   ServicosSlugRoute: typeof ServicosSlugRoute
@@ -115,6 +154,27 @@ declare module '@tanstack/react-router' {
       path: '/sobre'
       fullPath: '/sobre'
       preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orcamento': {
+      id: '/orcamento'
+      path: '/orcamento'
+      fullPath: '/orcamento'
+      preLoaderRoute: typeof OrcamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigado': {
+      id: '/obrigado'
+      path: '/obrigado'
+      fullPath: '/obrigado'
+      preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -157,6 +217,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
+  ObrigadoRoute: ObrigadoRoute,
+  OrcamentoRoute: OrcamentoRoute,
   SobreRoute: SobreRoute,
   ProjetosSlugRoute: ProjetosSlugRoute,
   ServicosSlugRoute: ServicosSlugRoute,
