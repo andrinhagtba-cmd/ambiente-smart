@@ -7,6 +7,7 @@ import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
 import { QuoteCTA } from "@/components/shared/QuoteCTA";
 import { ServiceCard } from "@/components/shared/ServiceCard";
+import { ServiceVideo } from "@/components/shared/ServiceVideo";
 import { SERVICES, getServiceBySlug, type Service } from "@/data/services";
 import { PROJECTS } from "@/data/projects";
 import { ProjectCard } from "@/components/shared/ProjectCard";
@@ -98,13 +99,10 @@ function ServicoPage() {
       {/* Benefícios + imagem */}
       <section className="container-site grid items-center gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <img
-            src={service.image}
-            alt={`${service.name} — ambiente com solução Will Decor`}
-            loading="lazy"
-            width={1024}
-            height={1280}
-            className="aspect-[4/5] w-full object-cover"
+          <ServiceVideo
+            src={service.video}
+            poster={service.image}
+            alt={`${service.name} — ambiente com solução Will Decor em movimento`}
           />
         </Reveal>
         <div>
