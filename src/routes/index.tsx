@@ -186,19 +186,24 @@ function Index() {
       </section>
 
       {/* Cortinas motorizadas */}
-      <section className="bg-ink py-20 text-ink-foreground md:py-28">
-        <div className="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <Reveal>
+      <section className="relative overflow-hidden bg-ink text-ink-foreground">
+        <div className="grid lg:grid-cols-2">
+          <Reveal className="relative min-h-[420px] lg:min-h-[640px]">
             <img
               src={motorizedImg}
               alt="Ambiente escuro e sofisticado com cortinas motorizadas e iluminação indireta"
               loading="lazy"
               width={1600}
               height={1200}
-              className="aspect-[4/3] w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            {/* Degradê que funde a imagem no fundo ink ao chegar no texto */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink lg:bg-gradient-to-r"
             />
           </Reveal>
-          <div>
+          <div className="container-site py-20 md:py-28 lg:py-32 lg:pl-16 xl:pl-24">
             <SectionHeading
               dark
               eyebrow="Conforto e automação"
