@@ -1,11 +1,12 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Instagram, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MAIN_NAV } from "@/data/navigation";
 import { SERVICES } from "@/data/services";
-import { CONTACT_PHONE_DISPLAY } from "@/data/brand";
+import { CONTACT_PHONE_DISPLAY, INSTAGRAM_URL } from "@/data/brand";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import menuBg from "@/assets/motorized.jpg";
 
 function Logo({ light }: { light: boolean }) {
   return (
@@ -155,45 +156,83 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Menu de navegação"
-          className="fixed inset-0 z-50 flex h-dvh flex-col bg-background lg:hidden"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) setMenuOpen(false);
-          }}
+          className="fixed inset-0 z-50 flex h-dvh flex-col overflow-hidden bg-ink text-ink-foreground lg:hidden"
         >
-          <div className="container-site flex h-[4.5rem] shrink-0 items-center justify-between">
-            <Logo light={false} />
+          {/* Camadas visuais: cortina + degradê premium + brilho bronze */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-60"
+            style={{ backgroundImage: `url(${menuBg})` }}
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/85 to-ink"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-24 top-1/3 h-[26rem] w-[26rem] rounded-full bg-bronze/20 blur-[120px]"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-32 bottom-0 h-[22rem] w-[22rem] rounded-full bg-primary/25 blur-[140px]"
+          />
+
+          {/* Header do menu */}
+          <div className="relative z-10 container-site flex h-[4.5rem] shrink-0 items-center justify-between">
+            <Logo light />
             <button
               ref={closeButtonRef}
               type="button"
               onClick={() => setMenuOpen(false)}
               aria-label="Fechar menu"
-              className="flex size-11 items-center justify-center text-foreground"
+              className="flex size-11 items-center justify-center rounded-full border border-cream/15 bg-cream/5 text-cream backdrop-blur-md transition-all hover:border-bronze/60 hover:bg-bronze/15 hover:text-bronze"
             >
-              <X className="size-6" aria-hidden="true" />
+              <X className="size-5" aria-hidden="true" />
             </button>
           </div>
-          <nav aria-label="Navegação principal" className="container-site flex-1 overflow-y-auto pb-8 pt-4">
-            <ul className="divide-y divide-border">
-              {MAIN_NAV.map((item) =>
+
+          <nav
+            aria-label="Navegação principal"
+            className="relative z-10 container-site flex-1 overflow-y-auto pb-10 pt-6"
+          >
+            <p className="eyebrow text-bronze/80">Navegação</p>
+
+            <ul className="mt-5 space-y-2">
+              {MAIN_NAV.map((item, index) =>
                 item.to === "/servicos" ? (
-                  <li key={item.to}>
+                  <li
+                    key={item.to}
+                    className="overflow-hidden rounded-2xl border border-cream/10 bg-cream/[0.04] backdrop-blur-md"
+                  >
                     <button
                       type="button"
                       onClick={() => setServicesOpen((v) => !v)}
                       aria-expanded={servicesOpen}
-                      className="flex w-full items-center justify-between py-4 font-display text-2xl text-foreground"
+                      className="flex w-full items-center justify-between px-5 py-4 text-left"
                     >
-                      Serviços
+                      <span className="flex items-baseline gap-3">
+                        <span className="font-mono text-[0.65rem] tracking-widest text-bronze/70">
+                          0{index + 1}
+                        </span>
+                        <span className="font-display text-2xl text-cream">Serviços</span>
+                      </span>
                       <ChevronDown
-                        className={cn("size-5 text-taupe transition-transform", servicesOpen && "rotate-180")}
+                        className={cn(
+                          "size-5 text-bronze transition-transform duration-300",
+                          servicesOpen && "rotate-180",
+                        )}
                         aria-hidden="true"
                       />
                     </button>
                     {servicesOpen ? (
-                      <ul className="pb-4 pl-4">
+                      <ul className="border-t border-cream/10 bg-ink/40 px-5 py-3">
                         <li>
-                          <Link to="/servicos" className="block py-2 text-sm text-muted-foreground">
+                          <Link
+                            to="/servicos"
+                            className="flex items-center justify-between py-2.5 text-sm text-cream/85 transition-colors hover:text-bronze"
+                          >
                             Todos os serviços
+                            <ChevronRight className="size-4 opacity-60" aria-hidden="true" />
                           </Link>
                         </li>
                         {SERVICES.map((s) => (
@@ -201,9 +240,10 @@ export function Header() {
                             <Link
                               to="/servicos/$slug"
                               params={{ slug: s.slug }}
-                              className="block py-2 text-sm text-muted-foreground"
+                              className="flex items-center justify-between py-2.5 text-sm text-cream/75 transition-colors hover:text-bronze"
                             >
                               {s.name}
+                              <ChevronRight className="size-4 opacity-50" aria-hidden="true" />
                             </Link>
                           </li>
                         ))}
@@ -211,30 +251,72 @@ export function Header() {
                     ) : null}
                   </li>
                 ) : (
-                  <li key={item.to}>
+                  <li
+                    key={item.to}
+                    className="overflow-hidden rounded-2xl border border-cream/10 bg-cream/[0.04] backdrop-blur-md transition-colors hover:border-bronze/40 hover:bg-cream/[0.07]"
+                  >
                     <Link
                       to={item.to}
-                      className="block py-4 font-display text-2xl text-foreground"
-                      activeProps={{ className: "block py-4 font-display text-2xl text-bronze" }}
+                      className="flex items-center justify-between px-5 py-4"
+                      activeProps={{ className: "flex items-center justify-between px-5 py-4 bg-bronze/10" }}
                       activeOptions={{ exact: item.to === "/" }}
                     >
-                      {item.label}
+                      <span className="flex items-baseline gap-3">
+                        <span className="font-mono text-[0.65rem] tracking-widest text-bronze/70">
+                          0{index + 1}
+                        </span>
+                        <span className="font-display text-2xl text-cream">{item.label}</span>
+                      </span>
+                      <ChevronRight className="size-4 text-bronze/80" aria-hidden="true" />
                     </Link>
                   </li>
                 ),
               )}
             </ul>
-            <div className="mt-8 space-y-3">
-              <Link to="/orcamento" className="btn btn-primary w-full">
+
+            <div className="mt-10 space-y-3">
+              <Link
+                to="/orcamento"
+                className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-bronze via-bronze to-primary px-6 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-ink shadow-[0_18px_45px_-12px_rgba(0,0,0,0.65)] transition-transform hover:scale-[1.01]"
+              >
                 Solicitar orçamento
+                <ChevronRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </Link>
-              <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-outline w-full">
+              <a
+                href={buildWhatsAppUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-full border border-cream/25 bg-cream/5 px-6 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-cream backdrop-blur-md transition-colors hover:border-bronze hover:text-bronze"
+              >
+                <MessageCircle className="size-4" aria-hidden="true" />
                 Falar pelo WhatsApp
               </a>
-              <p className="flex items-center justify-center gap-2 pt-2 text-sm text-muted-foreground">
-                <Phone className="size-4" aria-hidden="true" />
+            </div>
+
+            <div className="mt-10 space-y-4 border-t border-cream/10 pt-6">
+              <p className="eyebrow text-bronze/70">Contato</p>
+              <a
+                href={`tel:${CONTACT_PHONE_DISPLAY.replace(/\D/g, "")}`}
+                className="flex items-center gap-3 text-sm text-cream/90"
+              >
+                <span className="flex size-9 items-center justify-center rounded-full border border-cream/15 bg-cream/5">
+                  <Phone className="size-4 text-bronze" aria-hidden="true" />
+                </span>
                 {CONTACT_PHONE_DISPLAY}
-              </p>
+              </a>
+              {INSTAGRAM_URL ? (
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-sm text-cream/90"
+                >
+                  <span className="flex size-9 items-center justify-center rounded-full border border-cream/15 bg-cream/5">
+                    <Instagram className="size-4 text-bronze" aria-hidden="true" />
+                  </span>
+                  Instagram
+                </a>
+              ) : null}
             </div>
           </nav>
         </div>
