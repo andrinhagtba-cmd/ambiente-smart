@@ -69,7 +69,13 @@ export function VideoHero() {
 
       <div className="container-site relative w-full pb-24 pt-40 md:pb-32">
         <div className="max-w-2xl">
-          <p className="eyebrow text-bronze">Decoração sob medida</p>
+          <p
+            className="eyebrow inline-flex items-center gap-2 rounded-full border border-bronze/40 bg-ink/55 px-4 py-1.5 text-bronze shadow-[0_8px_30px_rgba(0,0,0,0.45)] backdrop-blur-md"
+            style={{ textShadow: "0 2px 12px rgba(0,0,0,0.75)" }}
+          >
+            <span className="size-1.5 rounded-full bg-bronze" aria-hidden="true" />
+            Decoração sob medida
+          </p>
           <h1 className="mt-5 text-[2.75rem] leading-[1.04] text-cream md:text-7xl lg:text-[5.25rem]">
             Cortinas que transformam luz em atmosfera.
           </h1>
