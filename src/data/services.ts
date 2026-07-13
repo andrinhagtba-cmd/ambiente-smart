@@ -50,6 +50,7 @@ export const SERVICES: Service[] = [
     intro:
       "Cada janela pede uma solução própria. Trabalhamos com tecidos, forros, trilhos e acionamentos selecionados para o ambiente, sempre com medição precisa e instalação profissional.",
     image: serviceCortinas,
+    video: videoCortinas.url,
     benefits: [
       "Controle de luminosidade",
       "Mais privacidade",
@@ -108,6 +109,7 @@ export const SERVICES: Service[] = [
     intro:
       "Das horizontais em madeira às rolôs de tecido técnico, as persianas oferecem controle preciso da luz com linguagem contemporânea. Indicamos o modelo ideal para cada janela e rotina de uso.",
     image: servicePersianas,
+    video: videoPersianas.url,
     benefits: [
       "Controle preciso da entrada de luz",
       "Ocupação mínima de espaço",
@@ -161,6 +163,7 @@ export const SERVICES: Service[] = [
     intro:
       "Varandas, terraços e fachadas ganham sombra, proteção e identidade com toldos dimensionados para cada vão. Trabalhamos com estruturas discretas e tecidos técnicos de longa durabilidade.",
     image: serviceToldos,
+    video: videoToldos.url,
     benefits: [
       "Proteção solar para áreas externas",
       "Conforto térmico nos ambientes internos",
@@ -212,6 +215,7 @@ export const SERVICES: Service[] = [
     intro:
       "A parede certa muda a percepção do ambiente inteiro. Fazemos a curadoria de padronagens, texturas e materiais, com aplicação profissional e acabamento preciso em cantos, recortes e encontros.",
     image: servicePapeis,
+    video: videoPapeis.url,
     benefits: [
       "Curadoria de padronagens e texturas",
       "Aplicação profissional sem emendas aparentes",
@@ -262,6 +266,7 @@ export const SERVICES: Service[] = [
     intro:
       "O tapete certo organiza o layout, define áreas e traz conforto ao caminhar. Trabalhamos com fibras naturais e fios técnicos, em medidas exatas para o seu ambiente e mobiliário.",
     image: serviceTapetes,
+    video: videoTapetes.url,
     benefits: [
       "Medidas exatas para o ambiente",
       "Variedade de fibras e tramas",
@@ -311,6 +316,7 @@ export const SERVICES: Service[] = [
     intro:
       "A boiserie transforma paredes lisas em superfícies com profundidade e desenho. Projetamos o gabarito de molduras em proporção com o pé-direito, portas e mobiliário do ambiente.",
     image: serviceBoiserie,
+    video: videoBoiserie.url,
     benefits: [
       "Desenho proporcional ao ambiente",
       "Valorização arquitetônica das paredes",
@@ -361,6 +367,7 @@ export const SERVICES: Service[] = [
     intro:
       "A cabeceira define a presença da cama no quarto. Desenvolvemos peças estofadas sob medida, do desenho à escolha do tecido, em proporção com a parede, a iluminação e as mesas laterais.",
     image: serviceCabeceiras,
+    video: videoCabeceiras.url,
     benefits: [
       "Desenho exclusivo para o quarto",
       "Ampla cartela de tecidos",
