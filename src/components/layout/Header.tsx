@@ -16,7 +16,7 @@ function Logo({ light }: { light: boolean }) {
           light ? "text-cream" : "text-foreground",
         )}
       >
-        Will
+        Ambiente
       </span>
       <span
         className={cn(
@@ -24,7 +24,7 @@ function Logo({ light }: { light: boolean }) {
           light ? "text-cream/80" : "text-taupe",
         )}
       >
-        Decor
+        Smart
       </span>
     </Link>
   );
