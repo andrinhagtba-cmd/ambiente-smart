@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { Ear, Eye, HandHeart, Layers, Ruler, ShieldCheck } from "lucide-react";
+import { Ear, Eye, HandHeart, Layers, Ruler, ShieldCheck, Sparkles } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
@@ -52,14 +52,28 @@ function SobrePage() {
       {/* Apresentação */}
       <section className="container-site grid items-center gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <img
-            src={aboutMain}
-            alt="Ambiente contemporâneo com cortinas de linho e materiais naturais"
-            loading="lazy"
-            width={1024}
-            height={1400}
-            className="aspect-[3/4] w-full object-cover"
-          />
+          <div className="relative">
+            <div className="overflow-hidden rounded-[2rem] shadow-[0_40px_100px_-40px_oklch(0.185_0.008_70/0.45)] ring-1 ring-border/60">
+              <img
+                src={aboutMain}
+                alt="Ambiente contemporâneo com cortinas de linho e materiais naturais"
+                loading="lazy"
+                width={1024}
+                height={1400}
+                className="aspect-[3/4] w-full object-cover"
+              />
+            </div>
+            {/* Selo flutuante */}
+            <div className="absolute -bottom-6 -right-6 hidden items-center gap-3 rounded-2xl border border-border/70 bg-cream px-5 py-4 shadow-[0_25px_50px_-25px_oklch(0.185_0.008_70/0.5)] backdrop-blur-md md:flex">
+              <div className="flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-bronze to-primary text-ink-foreground">
+                <Sparkles className="size-4" aria-hidden strokeWidth={2} />
+              </div>
+              <div>
+                <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-taupe">Estúdio</p>
+                <p className="font-display text-lg font-bold leading-tight text-foreground">Will Decor</p>
+              </div>
+            </div>
+          </div>
         </Reveal>
         <div>
           <SectionHeading
@@ -77,20 +91,34 @@ function SobrePage() {
               ajudamos você a decidir com segurança.
             </p>
           </div>
-          {/* TODO: inserir aqui a história real da empresa, foto da equipe e do showroom quando disponíveis. */}
         </div>
       </section>
 
-      {/* Valores */}
+      {/* Valores — cards arredondados premium */}
       <section className="bg-cream py-20 md:py-28">
         <div className="container-site">
           <SectionHeading eyebrow="Valores" title="O que guia cada projeto." align="center" />
-          <ul className="mt-12 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {VALUES.map(({ icon: Icon, name, text }, i) => (
-              <Reveal as="li" key={name} delay={(i % 3) * 90} className="bg-background p-8">
-                <Icon className="size-5 text-bronze" aria-hidden="true" strokeWidth={1.5} />
-                <h3 className="mt-4 font-sans text-base font-semibold text-foreground">{name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
+              <Reveal
+                as="li"
+                key={name}
+                delay={(i % 3) * 90}
+                className="group relative overflow-hidden rounded-[1.75rem] border border-border/70 bg-background p-8 shadow-[0_18px_50px_-30px_oklch(0.185_0.008_70/0.3)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-bronze/50 hover:shadow-[0_35px_70px_-30px_oklch(0.185_0.008_70/0.45)]"
+              >
+                {/* Glow bronze radial no hover */}
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
+                  style={{ background: "oklch(0.645 0.062 70 / 0.35)" }}
+                />
+                <div className="relative">
+                  <div className="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-surface-warm to-cream text-ink shadow-inner ring-1 ring-border/60 transition-all duration-500 group-hover:from-bronze group-hover:to-primary group-hover:text-ink-foreground group-hover:ring-transparent">
+                    <Icon className="size-6" aria-hidden strokeWidth={1.6} />
+                  </div>
+                  <h3 className="mt-6 font-display text-xl font-bold text-foreground">{name}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
+                </div>
               </Reveal>
             ))}
           </ul>
@@ -101,24 +129,28 @@ function SobrePage() {
       <section className="container-site grid items-center gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
         <div className="order-2 grid grid-cols-2 gap-4 lg:order-1">
           <Reveal>
-            <img
-              src={aboutDetail}
-              alt="Detalhe de textura de linho em tom marfim"
-              loading="lazy"
-              width={900}
-              height={900}
-              className="aspect-square w-full object-cover"
-            />
+            <div className="overflow-hidden rounded-[1.75rem] shadow-[0_25px_60px_-30px_oklch(0.185_0.008_70/0.4)] ring-1 ring-border/60">
+              <img
+                src={aboutDetail}
+                alt="Detalhe de textura de linho em tom marfim"
+                loading="lazy"
+                width={900}
+                height={900}
+                className="aspect-square w-full object-cover"
+              />
+            </div>
           </Reveal>
           <Reveal delay={100} className="mt-8">
-            <img
-              src={project6}
-              alt="Sala de jantar com boiserie e cortinas de linho"
-              loading="lazy"
-              width={1024}
-              height={1280}
-              className="aspect-[4/5] w-full object-cover"
-            />
+            <div className="overflow-hidden rounded-[1.75rem] shadow-[0_25px_60px_-30px_oklch(0.185_0.008_70/0.4)] ring-1 ring-border/60">
+              <img
+                src={project6}
+                alt="Sala de jantar com boiserie e cortinas de linho"
+                loading="lazy"
+                width={1024}
+                height={1280}
+                className="aspect-[4/5] w-full object-cover"
+              />
+            </div>
           </Reveal>
         </div>
         <div className="order-1 lg:order-2">
@@ -134,10 +166,10 @@ function SobrePage() {
       <section className="bg-cream py-20 md:py-28">
         <div className="container-site">
           <SectionHeading eyebrow="Processo de trabalho" title="Do primeiro contato à instalação." align="center" />
-          <div className="mt-12">
+          <div className="mt-14">
             <ProcessSteps />
           </div>
-          <Reveal className="mt-12 text-center">
+          <Reveal className="mt-14 text-center">
             <Link to="/orcamento" className="btn btn-primary">
               Solicitar orçamento
             </Link>
