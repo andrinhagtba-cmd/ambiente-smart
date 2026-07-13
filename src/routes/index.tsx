@@ -89,14 +89,21 @@ function Index() {
 
       {/* Faixa de confiança */}
       <section aria-label="Diferenciais da Ambiente Smart" className="border-b border-border bg-cream">
-        <div className="container-site">
-          <ul className="grid grid-cols-2 divide-border sm:divide-x lg:grid-cols-4">
+        <div className="container-site py-8 lg:py-0">
+          <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-border">
             {TRUST_ITEMS.map(({ icon: Icon, label }) => (
-              <li key={label} className="flex items-center justify-center gap-3 px-4 py-6 text-center lg:py-8">
-                <Icon className="size-4 shrink-0 text-bronze" aria-hidden="true" strokeWidth={1.5} />
-                <span className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                  {label}
-                </span>
+              <li
+                key={label}
+                className="group relative overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br from-background to-cream p-5 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.25)] transition-all hover:-translate-y-0.5 hover:border-bronze/40 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:border-0 lg:bg-transparent lg:from-transparent lg:to-transparent lg:p-0 lg:py-8 lg:shadow-none lg:hover:translate-y-0 lg:hover:shadow-none"
+              >
+                <div className="flex flex-col items-start gap-3 lg:flex-row lg:items-center lg:justify-center lg:gap-3 lg:px-4 lg:text-center">
+                  <span className="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-bronze/15 to-primary/10 text-bronze ring-1 ring-bronze/20 transition-transform group-hover:scale-105 lg:size-auto lg:rounded-none lg:bg-none lg:ring-0">
+                    <Icon className="size-4 shrink-0" aria-hidden="true" strokeWidth={1.5} />
+                  </span>
+                  <span className="text-[0.7rem] font-semibold uppercase leading-snug tracking-[0.14em] text-foreground lg:text-[0.72rem] lg:tracking-[0.16em] lg:text-muted-foreground">
+                    {label}
+                  </span>
+                </div>
               </li>
             ))}
           </ul>
