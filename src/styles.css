@@ -47,7 +47,7 @@
   --color-surface-soft: var(--surface-soft);
   --color-surface-warm: var(--surface-warm);
 
-  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --font-display: "Bodoni Moda", "Didot", "Cormorant Garamond", "Georgia", serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -114,8 +114,14 @@
   h2,
   h3 {
     font-family: var(--font-display);
-    font-weight: 500;
-    letter-spacing: -0.01em;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    font-optical-sizing: auto;
+  }
+
+  h1 {
+    font-weight: 900;
+    letter-spacing: -0.035em;
   }
 
   ::selection {
@@ -163,31 +169,55 @@
   background-color: var(--border);
 }
 
-/* Botões da marca */
+/* Botões da marca — CTAs premium */
 @utility btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
-  min-height: 3rem;
-  padding-inline: 1.75rem;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  gap: 0.75rem;
+  min-height: 3.25rem;
+  padding-inline: 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  border-radius: var(--radius);
+  border-radius: 999px;
+  overflow: hidden;
+  isolation: isolate;
   transition:
-    background-color 0.3s ease,
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.4s ease,
     color 0.3s ease,
     border-color 0.3s ease,
-    opacity 0.3s ease;
+    background-color 0.3s ease;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+  & > svg {
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  &:hover > svg {
+    transform: translateX(4px);
+  }
 }
 
 @utility btn-primary {
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--ink) 0%, var(--primary) 55%, var(--bronze) 130%);
   color: var(--primary-foreground);
+  box-shadow:
+    0 1px 0 0 oklch(1 0 0 / 12%) inset,
+    0 10px 24px -12px oklch(0.185 0.008 70 / 55%),
+    0 2px 6px -2px oklch(0.185 0.008 70 / 30%);
   &:hover {
-    background-color: var(--ink);
+    box-shadow:
+      0 1px 0 0 oklch(1 0 0 / 18%) inset,
+      0 18px 40px -14px oklch(0.185 0.008 70 / 65%),
+      0 4px 12px -2px oklch(0.645 0.062 70 / 35%);
   }
 }
 
@@ -195,27 +225,49 @@
   border: 1px solid var(--taupe);
   color: var(--foreground);
   background-color: transparent;
+  backdrop-filter: blur(6px);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--ink) 0%, var(--primary) 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: -1;
+  }
   &:hover {
-    border-color: var(--foreground);
-    background-color: var(--cream);
+    color: var(--primary-foreground);
+    border-color: transparent;
+    box-shadow: 0 14px 32px -14px oklch(0.185 0.008 70 / 55%);
+  }
+  &:hover::before {
+    opacity: 1;
   }
 }
 
 @utility btn-light {
   background-color: var(--cream);
   color: var(--ink);
+  box-shadow:
+    0 1px 0 0 oklch(1 0 0 / 60%) inset,
+    0 10px 24px -14px oklch(0.185 0.008 70 / 45%);
   &:hover {
     background-color: var(--surface-warm);
+    box-shadow:
+      0 1px 0 0 oklch(1 0 0 / 70%) inset,
+      0 16px 34px -14px oklch(0.185 0.008 70 / 55%);
   }
 }
 
 @utility btn-outline-light {
-  border: 1px solid oklch(0.95 0.006 85 / 45%);
+  border: 1px solid oklch(0.95 0.006 85 / 55%);
   color: var(--ink-foreground);
-  background-color: transparent;
+  background-color: oklch(0.95 0.006 85 / 4%);
+  backdrop-filter: blur(8px);
   &:hover {
     border-color: var(--ink-foreground);
-    background-color: oklch(0.95 0.006 85 / 10%);
+    background-color: oklch(0.95 0.006 85 / 14%);
+    box-shadow: 0 14px 32px -14px oklch(0 0 0 / 45%);
   }
 }
 
