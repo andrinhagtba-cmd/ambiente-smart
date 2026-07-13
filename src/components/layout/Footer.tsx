@@ -32,7 +32,7 @@ export function Footer() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram da Will Decor"
+              aria-label="Instagram da Ambiente Smart"
               className="mt-6 inline-flex size-11 items-center justify-center border border-ink-foreground/20 text-ink-foreground/80 transition-colors hover:border-bronze hover:text-bronze"
             >
               <Instagram className="size-5" aria-hidden="true" />

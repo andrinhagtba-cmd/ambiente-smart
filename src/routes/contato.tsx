@@ -18,13 +18,13 @@ export const Route = createFileRoute("/contato")({
   component: ContatoPage,
   head: () => ({
     meta: [
-      { title: "Contato | Will Decor" },
+      { title: "Contato | Ambiente Smart" },
       {
         name: "description",
         content:
-          "Fale com a Will Decor: WhatsApp, telefone, e-mail e horários de atendimento. Estamos prontos para conversar sobre o seu projeto.",
+          "Fale com a Ambiente Smart: WhatsApp, telefone, e-mail e horários de atendimento. Estamos prontos para conversar sobre o seu projeto.",
       },
-      { property: "og:title", content: "Contato | Will Decor" },
+      { property: "og:title", content: "Contato | Ambiente Smart" },
       { property: "og:description", content: "Fale com a nossa equipe sobre o seu projeto de decoração sob medida." },
       { property: "og:url", content: "/contato" },
     ],
@@ -119,7 +119,7 @@ function ContatoPage() {
             <ChannelCard icon={Mail} label="E-mail" value={CONTACT_EMAIL} href={`mailto:${CONTACT_EMAIL}`} />
           </Reveal>
           <Reveal delay={240}>
-            <ChannelCard icon={Instagram} label="Instagram" value="@willdecor" href={INSTAGRAM_URL} external />
+            <ChannelCard icon={Instagram} label="Instagram" value="@ambientesmart" href={INSTAGRAM_URL} external />
           </Reveal>
         </div>
       </section>

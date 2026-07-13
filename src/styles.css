@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * WILL DECOR — Design System
+ * AMBIENTE SMART — Design System
  * Paleta editorial premium: marfim, areia, taupe, marrom profundo e bronze.
  * Todos os tokens em oklch. Nunca usar cores hardcoded nos componentes.
  */

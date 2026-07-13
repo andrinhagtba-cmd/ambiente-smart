@@ -13,13 +13,13 @@ export const Route = createFileRoute("/sobre")({
   component: SobrePage,
   head: () => ({
     meta: [
-      { title: "Sobre a Will Decor | Decoração Sob Medida em Brasília" },
+      { title: "Sobre a Ambiente Smart | Decoração Sob Medida em Brasília" },
       {
         name: "description",
         content:
-          "Conheça a Will Decor: atendimento consultivo, curadoria de materiais e soluções de decoração sob medida para ambientes residenciais e comerciais.",
+          "Conheça a Ambiente Smart: atendimento consultivo, curadoria de materiais e soluções de decoração sob medida para ambientes residenciais e comerciais.",
       },
-      { property: "og:title", content: "Sobre a Will Decor | Decoração Sob Medida em Brasília" },
+      { property: "og:title", content: "Sobre a Ambiente Smart | Decoração Sob Medida em Brasília" },
       {
         property: "og:description",
         content: "Atendimento consultivo, curadoria de materiais e soluções sob medida.",
@@ -43,7 +43,7 @@ function SobrePage() {
   return (
     <>
       <PageHero
-        eyebrow="Sobre a Will Decor"
+        eyebrow="Sobre a Ambiente Smart"
         title="Decoração sob medida, feita com escuta e cuidado."
         description="Somos um estúdio de soluções sob medida para janelas, paredes e ambientes. Trabalhamos próximos de cada cliente para traduzir necessidades em composições elegantes e funcionais."
         breadcrumbs={[{ label: "Sobre" }]}
@@ -70,7 +70,7 @@ function SobrePage() {
               </div>
               <div>
                 <p className="text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-taupe">Estúdio</p>
-                <p className="font-display text-lg font-bold leading-tight text-foreground">Will Decor</p>
+                <p className="font-display text-lg font-bold leading-tight text-foreground">Ambiente Smart</p>
               </div>
             </div>
           </div>

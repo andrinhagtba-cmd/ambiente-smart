@@ -1,11 +1,11 @@
 /**
  * Dados centrais da marca.
- * SUBSTITUIR os valores marcados com TODO pelos dados reais da Will Decor.
+ * SUBSTITUIR os valores marcados com TODO pelos dados reais da Ambiente Smart.
  */
 
 export const BRAND = {
-  name: "Will Decor",
-  legalName: "Will Decor Decorações", // TODO: razão social real
+  name: "Ambiente Smart",
+  legalName: "Ambiente Smart Decorações", // TODO: razão social real
   tagline: "Decoração sob medida",
   shortDescription:
     "Soluções de decoração sob medida — cortinas, persianas, toldos, papéis de parede, tapetes, boiserie e cabeceiras — com atendimento consultivo e instalação profissional.",
@@ -17,7 +17,7 @@ export const BRAND = {
 export const WHATSAPP_NUMBER = "5561900000000";
 
 /** TODO: substituir pelo e-mail real. */
-export const CONTACT_EMAIL = "contato@willdecor.com.br";
+export const CONTACT_EMAIL = "contato@ambientesmart.com.br";
 
 /** TODO: substituir pelo telefone real. */
 export const CONTACT_PHONE_DISPLAY = "(61) 9 0000-0000";
@@ -27,7 +27,7 @@ export const CONTACT_PHONE_LINK = "+5561900000000";
 export const COMPANY_ADDRESS = "Brasília — DF";
 
 /** TODO: substituir pela URL real do Instagram. */
-export const INSTAGRAM_URL = "https://instagram.com/willdecor";
+export const INSTAGRAM_URL = "https://instagram.com/ambientesmart";
 
 /** TODO: substituir pela URL real do Google Maps (embed ou link). */
 export const GOOGLE_MAPS_URL = "";

@@ -6,12 +6,12 @@ export const Route = createFileRoute("/politica-de-privacidade")({
   component: PoliticaPage,
   head: () => ({
     meta: [
-      { title: "Política de Privacidade | Will Decor" },
+      { title: "Política de Privacidade | Ambiente Smart" },
       {
         name: "description",
-        content: "Saiba como a Will Decor coleta, utiliza e protege os dados pessoais informados em seus canais de atendimento.",
+        content: "Saiba como a Ambiente Smart coleta, utiliza e protege os dados pessoais informados em seus canais de atendimento.",
       },
-      { property: "og:title", content: "Política de Privacidade | Will Decor" },
+      { property: "og:title", content: "Política de Privacidade | Ambiente Smart" },
       { property: "og:url", content: "/politica-de-privacidade" },
     ],
     links: [{ rel: "canonical", href: "/politica-de-privacidade" }],

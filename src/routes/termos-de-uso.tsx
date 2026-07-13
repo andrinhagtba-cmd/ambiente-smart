@@ -6,12 +6,12 @@ export const Route = createFileRoute("/termos-de-uso")({
   component: TermosPage,
   head: () => ({
     meta: [
-      { title: "Termos de Uso | Will Decor" },
+      { title: "Termos de Uso | Ambiente Smart" },
       {
         name: "description",
-        content: "Condições de uso do site da Will Decor: conteúdo institucional, orçamentos e canais de atendimento.",
+        content: "Condições de uso do site da Ambiente Smart: conteúdo institucional, orçamentos e canais de atendimento.",
       },
-      { property: "og:title", content: "Termos de Uso | Will Decor" },
+      { property: "og:title", content: "Termos de Uso | Ambiente Smart" },
       { property: "og:url", content: "/termos-de-uso" },
     ],
     links: [{ rel: "canonical", href: "/termos-de-uso" }],

@@ -20,7 +20,7 @@ export const Route = createFileRoute("/servicos/$slug")({
   },
   head: ({ params }) => {
     const service = getServiceBySlug(params.slug);
-    if (!service) return { meta: [{ title: "Serviço não encontrado | Will Decor" }] };
+    if (!service) return { meta: [{ title: "Serviço não encontrado | Ambiente Smart" }] };
     return {
       meta: [
         { title: service.seoTitle },
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/servicos/$slug")({
             "@type": "Service",
             name: `${service.name} sob medida`,
             description: service.seoDescription,
-            provider: { "@type": "LocalBusiness", name: "Will Decor" },
+            provider: { "@type": "LocalBusiness", name: "Ambiente Smart" },
             areaServed: "Brasília — DF",
           }),
         },
@@ -102,7 +102,7 @@ function ServicoPage() {
           <ServiceVideo
             src={service.video}
             poster={service.image}
-            alt={`${service.name} — ambiente com solução Will Decor em movimento`}
+            alt={`${service.name} — ambiente com solução Ambiente Smart em movimento`}
           />
         </Reveal>
         <div>

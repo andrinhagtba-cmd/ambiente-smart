@@ -7,10 +7,10 @@ export const Route = createFileRoute("/obrigado")({
   component: ObrigadoPage,
   head: () => ({
     meta: [
-      { title: "Solicitação Enviada | Will Decor" },
+      { title: "Solicitação Enviada | Ambiente Smart" },
       { name: "description", content: "Recebemos a sua solicitação. Em breve nossa equipe entrará em contato." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "Solicitação Enviada | Will Decor" },
+      { property: "og:title", content: "Solicitação Enviada | Ambiente Smart" },
       { property: "og:url", content: "/obrigado" },
     ],
     links: [{ rel: "canonical", href: "/obrigado" }],
