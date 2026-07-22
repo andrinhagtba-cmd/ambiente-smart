@@ -3,7 +3,7 @@ import { ArrowUp, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { MAIN_NAV, LEGAL_NAV } from "@/data/navigation";
 import { SERVICES } from "@/data/services";
 import {
-  BRAND,
+  
   COMPANY_ADDRESS,
   CONTACT_EMAIL,
   CONTACT_PHONE_DISPLAY,
@@ -114,9 +114,20 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-ink-foreground/10 pt-6 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-ink-muted">
-            © {year} {BRAND.name}. Todos os direitos reservados.
-          </p>
+          <div className="flex flex-col gap-1.5 text-xs text-ink-muted">
+            <p>© {year} Todos os direitos reservados · Tecelar Cortinas</p>
+            <p className="flex items-center gap-1.5">
+              Feito com <span aria-label="carinho" className="text-bronze">❤</span> por{" "}
+              <a
+                href="https://vtrvideo.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold uppercase tracking-[0.18em] text-ink-foreground transition-colors hover:text-bronze"
+              >
+                VTRVIDEO
+              </a>
+            </p>
+          </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             {LEGAL_NAV.map((item) => (
               <Link
