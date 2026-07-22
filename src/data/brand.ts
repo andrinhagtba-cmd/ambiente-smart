@@ -21,8 +21,12 @@ export const CONTACT_EMAIL = "contato@tecelarcortinas.com.br";
 export const CONTACT_PHONE_DISPLAY = "(61) 98515-6162";
 export const CONTACT_PHONE_LINK = "+5561985156162";
 
-/** TODO: substituir pelo endereço real. */
-export const COMPANY_ADDRESS = "Brasília — DF";
+/** Endereço completo da loja. */
+export const COMPANY_ADDRESS =
+  "Trecho SIA Trecho 07, Nº 100, SCE Conjunto A, Loja A11 — Brasília/DF";
+
+/** CNPJ da empresa. */
+export const COMPANY_CNPJ = "67.508.939/0001-32";
 
 export const INSTAGRAM_URL = "https://www.instagram.com/tecelarcortinas/";
 
