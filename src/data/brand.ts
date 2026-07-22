@@ -24,8 +24,7 @@ export const CONTACT_PHONE_LINK = "+5561985156162";
 /** TODO: substituir pelo endereço real. */
 export const COMPANY_ADDRESS = "Brasília — DF";
 
-/** TODO: substituir pela URL real do Instagram. */
-export const INSTAGRAM_URL = "https://instagram.com/ambientesmart";
+export const INSTAGRAM_URL = "https://www.instagram.com/tecelarcortinas/";
 
 /** TODO: substituir pela URL real do Google Maps (embed ou link). */
 export const GOOGLE_MAPS_URL = "";
