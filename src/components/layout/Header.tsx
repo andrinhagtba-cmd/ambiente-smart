@@ -123,9 +123,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link to="/orcamento" className={cn("btn", transparent ? "btn-outline-light" : "btn-primary", "min-h-[2.6rem] px-5 text-[0.72rem]")}>
-            Solicitar orçamento
-          </Link>
+          <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className={cn("btn", transparent ? "btn-outline-light" : "btn-primary", "min-h-[2.6rem] px-5 text-[0.72rem]")}>Solicitar orçamento</a>
         </div>
 
         {/* Abrir menu mobile */}

@@ -35,12 +35,9 @@ export function FloatingCTAs() {
             Preencha o formulário
           </span>
         ) : (
-          <Link
-            to="/orcamento"
+          <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer"
             className="flex min-h-11 items-center justify-center bg-primary text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-primary-foreground"
-          >
-            Solicitar orçamento
-          </Link>
+          >Solicitar orçamento</a>
         )}
       </div>
     </>

@@ -28,9 +28,7 @@ export function QuoteCTA({
           <h2 className="text-4xl leading-[1.1] text-ink-foreground md:text-5xl lg:text-[3.4rem]">{title}</h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-ink-muted md:text-lg">{description}</p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link to="/orcamento" className="btn btn-light w-full sm:w-auto">
-              Solicitar orçamento
-            </Link>
+            <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-light w-full sm:w-auto">Solicitar orçamento</a>
             <a
               href={buildWhatsAppUrl()}
               target="_blank"

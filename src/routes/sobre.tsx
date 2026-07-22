@@ -170,9 +170,7 @@ function SobrePage() {
             <ProcessSteps />
           </div>
           <Reveal className="mt-14 text-center">
-            <Link to="/orcamento" className="btn btn-primary">
-              Solicitar orçamento
-            </Link>
+            <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Solicitar orçamento</a>
           </Reveal>
         </div>
       </section>
