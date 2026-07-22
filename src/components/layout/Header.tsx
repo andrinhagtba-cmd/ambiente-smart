@@ -266,13 +266,15 @@ export function Header() {
             </ul>
 
             <div className="mt-10 space-y-3">
-              <Link
-                to="/orcamento"
+              <a
+                href={buildWhatsAppUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-bronze via-bronze to-primary px-6 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-ink shadow-[0_18px_45px_-12px_rgba(0,0,0,0.65)] transition-transform hover:scale-[1.01]"
               >
                 Solicitar orçamento
                 <ChevronRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-              </Link>
+              </a>
               <a
                 href={buildWhatsAppUrl()}
                 target="_blank"
