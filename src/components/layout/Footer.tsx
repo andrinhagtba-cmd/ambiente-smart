@@ -11,7 +11,7 @@ import {
   INSTAGRAM_URL,
 } from "@/data/brand";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
-import logoAsset from "@/assets/tecelar-logo.png.asset.json";
+import logoUrl from "@/assets/tecelar-logo.png";
 
 export function Footer() {
   const year = new Date().getFullYear();
