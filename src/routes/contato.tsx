@@ -119,7 +119,7 @@ function ContatoPage() {
             <ChannelCard icon={Mail} label="E-mail" value={CONTACT_EMAIL} href={`mailto:${CONTACT_EMAIL}`} />
           </Reveal>
           <Reveal delay={240}>
-            <ChannelCard icon={Instagram} label="Instagram" value="@ambientesmart" href={INSTAGRAM_URL} external />
+            <ChannelCard icon={Instagram} label="Instagram" value="@tecelarcortinas" href={INSTAGRAM_URL} external />
           </Reveal>
         </div>
       </section>
