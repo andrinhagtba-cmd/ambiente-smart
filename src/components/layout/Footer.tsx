@@ -22,7 +22,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="Tecelar — Cortinas e Persianas DF"
               className="h-14 w-auto brightness-0 invert"
             />
