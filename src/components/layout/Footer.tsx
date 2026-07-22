@@ -3,7 +3,7 @@ import { ArrowUp, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { MAIN_NAV, LEGAL_NAV } from "@/data/navigation";
 import { SERVICES } from "@/data/services";
 import {
-  BRAND,
+  
   COMPANY_ADDRESS,
   CONTACT_EMAIL,
   CONTACT_PHONE_DISPLAY,

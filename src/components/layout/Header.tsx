@@ -16,7 +16,7 @@ function Logo({ light }: { light: boolean }) {
         src={logoAsset.url}
         alt="Tecelar — Cortinas e Persianas DF"
         className={cn(
-          "h-10 w-auto md:h-12 transition",
+          "h-14 w-auto md:h-16 lg:h-20 transition",
           light ? "brightness-0 invert" : "",
         )}
       />
