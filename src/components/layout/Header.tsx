@@ -7,7 +7,7 @@ import { SERVICES } from "@/data/services";
 import { CONTACT_PHONE_DISPLAY, INSTAGRAM_URL } from "@/data/brand";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import menuBg from "@/assets/motorized.jpg";
-import logoAsset from "@/assets/tecelar-logo.png.asset.json";
+import logoUrl from "@/assets/tecelar-logo.png";
 
 function Logo({ light }: { light: boolean }) {
   return (
