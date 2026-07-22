@@ -7,26 +7,19 @@ import { SERVICES } from "@/data/services";
 import { CONTACT_PHONE_DISPLAY, INSTAGRAM_URL } from "@/data/brand";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import menuBg from "@/assets/motorized.jpg";
+import logoAsset from "@/assets/tecelar-logo.png.asset.json";
 
 function Logo({ light }: { light: boolean }) {
   return (
-    <Link to="/" aria-label="Ambiente Smart — página inicial" className="flex items-baseline gap-2">
-      <span
+    <Link to="/" aria-label="Tecelar — página inicial" className="flex items-center">
+      <img
+        src={logoAsset.url}
+        alt="Tecelar — Cortinas e Persianas DF"
         className={cn(
-          "font-display text-[1.55rem] leading-none tracking-[0.02em]",
-          light ? "text-cream" : "text-foreground",
+          "h-10 w-auto md:h-12 transition",
+          light ? "brightness-0 invert" : "",
         )}
-      >
-        Ambiente
-      </span>
-      <span
-        className={cn(
-          "text-[0.8rem] font-semibold uppercase leading-none tracking-[0.34em]",
-          light ? "text-cream/80" : "text-taupe",
-        )}
-      >
-        Smart
-      </span>
+      />
     </Link>
   );
 }
