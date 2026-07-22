@@ -1,3 +1,4 @@
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Ear, Eye, HandHeart, Layers, Ruler, ShieldCheck, Sparkles } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
