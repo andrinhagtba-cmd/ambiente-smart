@@ -5,6 +5,7 @@ import { SERVICES } from "@/data/services";
 import {
   
   COMPANY_ADDRESS,
+  COMPANY_CNPJ,
   CONTACT_EMAIL,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_LINK,
@@ -116,6 +117,7 @@ export function Footer() {
         <div className="mt-14 flex flex-col gap-4 border-t border-ink-foreground/10 pt-6 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-1.5 text-xs text-ink-muted">
             <p>© {year} Todos os direitos reservados · Tecelar Cortinas</p>
+            <p>CNPJ: {COMPANY_CNPJ}</p>
             <p className="flex items-center gap-1.5">
               Feito com <span aria-label="carinho" className="text-bronze">❤</span> por{" "}
               <a
