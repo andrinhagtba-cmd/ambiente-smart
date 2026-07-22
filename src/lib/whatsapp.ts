@@ -1,7 +1,7 @@
 import { WHATSAPP_NUMBER } from "@/data/brand";
 
 const DEFAULT_MESSAGE =
-  "Olá! Gostaria de conversar com um especialista da Ambiente Smart sobre um projeto de decoração sob medida.";
+  "Olá, Tecelar Cortinas! Gostaria de solicitar um orçamento para o meu projeto de decoração sob medida. Pode me ajudar?";
 
 export function buildWhatsAppUrl(message: string = DEFAULT_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
