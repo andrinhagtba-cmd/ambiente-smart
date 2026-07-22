@@ -13,15 +13,13 @@ export const BRAND = {
   region: "DF",
 };
 
-/** Número no formato internacional, apenas dígitos. TODO: substituir pelo número real. */
-export const WHATSAPP_NUMBER = "5561900000000";
+/** Número no formato internacional, apenas dígitos. */
+export const WHATSAPP_NUMBER = "5561985156162";
 
-/** TODO: substituir pelo e-mail real. */
-export const CONTACT_EMAIL = "contato@ambientesmart.com.br";
+export const CONTACT_EMAIL = "contato@tecelarcortinas.com.br";
 
-/** TODO: substituir pelo telefone real. */
-export const CONTACT_PHONE_DISPLAY = "(61) 9 0000-0000";
-export const CONTACT_PHONE_LINK = "+5561900000000";
+export const CONTACT_PHONE_DISPLAY = "(61) 98515-6162";
+export const CONTACT_PHONE_LINK = "+5561985156162";
 
 /** TODO: substituir pelo endereço real. */
 export const COMPANY_ADDRESS = "Brasília — DF";
