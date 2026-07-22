@@ -75,7 +75,7 @@ export function Header() {
           : "border-b border-border bg-background/90 backdrop-blur-md",
       )}
     >
-      <div className="container-site flex h-[4.5rem] items-center justify-between gap-4">
+      <div className="container-site flex h-20 items-center justify-between gap-4 md:h-24 lg:h-28">
         <Logo light={transparent} />
 
         {/* Navegação desktop */}
