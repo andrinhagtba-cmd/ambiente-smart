@@ -13,7 +13,7 @@ function Logo({ light }: { light: boolean }) {
   return (
     <Link to="/" aria-label="Tecelar — página inicial" className="flex items-center">
       <img
-        src={logoAsset.url}
+        src={logoUrl}
         alt="Tecelar — Cortinas e Persianas DF"
         className={cn(
           "h-14 w-auto md:h-16 lg:h-20 transition",
