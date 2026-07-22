@@ -1,3 +1,4 @@
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Ear, Eye, HandHeart, Layers, Ruler, ShieldCheck, Sparkles } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
@@ -170,9 +171,7 @@ function SobrePage() {
             <ProcessSteps />
           </div>
           <Reveal className="mt-14 text-center">
-            <Link to="/orcamento" className="btn btn-primary">
-              Solicitar orçamento
-            </Link>
+            <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Solicitar orçamento</a>
           </Reveal>
         </div>
       </section>

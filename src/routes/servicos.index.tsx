@@ -1,3 +1,4 @@
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
@@ -74,9 +75,7 @@ function ServicosPage() {
                   <Link to="/servicos/$slug" params={{ slug: service.slug }} className="btn btn-outline">
                     Ver detalhes
                   </Link>
-                  <Link to="/orcamento" className="btn btn-primary">
-                    Solicitar orçamento
-                  </Link>
+                  <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Solicitar orçamento</a>
                 </div>
               </div>
             </Reveal>

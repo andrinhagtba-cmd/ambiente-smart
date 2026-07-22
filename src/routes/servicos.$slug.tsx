@@ -1,3 +1,4 @@
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { Check, Hand, Settings2 } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
@@ -87,9 +88,7 @@ function ServicoPage() {
         breadcrumbs={[{ label: "Serviços", to: "/servicos" }, { label: service.name }]}
       >
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Link to="/orcamento" className="btn btn-primary">
-            Solicitar orçamento
-          </Link>
+          <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Solicitar orçamento</a>
           <Link to="/contato" className="btn btn-outline">
             Falar com um especialista
           </Link>

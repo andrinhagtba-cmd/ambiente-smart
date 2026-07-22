@@ -1,3 +1,4 @@
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { Link } from "@tanstack/react-router";
 import { ChevronDown, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -83,9 +84,7 @@ export function VideoHero() {
             Soluções personalizadas para criar ambientes mais elegantes, confortáveis e funcionais.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link to="/orcamento" className="btn btn-light w-full sm:w-auto">
-              Solicitar orçamento
-            </Link>
+            <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-light w-full sm:w-auto">Solicitar orçamento</a>
             <Link to="/servicos" className="btn btn-outline-light w-full sm:w-auto">
               Conhecer soluções
             </Link>
