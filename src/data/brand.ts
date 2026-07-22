@@ -34,8 +34,8 @@ export const INSTAGRAM_URL = "https://www.instagram.com/tecelarcortinas/";
 export const GOOGLE_MAPS_URL = "";
 
 export const BUSINESS_HOURS = [
-  { days: "Segunda a sexta", hours: "9h às 18h" }, // TODO: confirmar horários
-  { days: "Sábado", hours: "9h às 13h" }, // TODO: confirmar horários
+  { days: "Terça a domingo", hours: "9h às 18h" },
+  { days: "Segunda", hours: "Fechado" },
 ];
 
 /**
