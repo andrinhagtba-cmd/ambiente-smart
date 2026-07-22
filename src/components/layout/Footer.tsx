@@ -5,6 +5,7 @@ import { SERVICES } from "@/data/services";
 import {
   
   COMPANY_ADDRESS,
+  COMPANY_CNPJ,
   CONTACT_EMAIL,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_LINK,
