@@ -11,7 +11,7 @@ import {
   INSTAGRAM_URL,
 } from "@/data/brand";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
-import logoAsset from "@/assets/tecelar-logo.png.asset.json";
+import logoUrl from "@/assets/tecelar-logo.png";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -22,7 +22,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="Tecelar — Cortinas e Persianas DF"
               className="h-14 w-auto brightness-0 invert"
             />
