@@ -11,6 +11,7 @@ import {
   INSTAGRAM_URL,
 } from "@/data/brand";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import logoAsset from "@/assets/tecelar-logo.png.asset.json";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -20,10 +21,11 @@ export function Footer() {
       <div className="container-site pb-10 pt-16 md:pt-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <p className="flex items-baseline gap-2">
-              <span className="font-display text-3xl">Ambiente</span>
-              <span className="text-sm font-semibold uppercase tracking-[0.34em] text-bronze">Smart</span>
-            </p>
+            <img
+              src={logoAsset.url}
+              alt="Tecelar — Cortinas e Persianas DF"
+              className="h-14 w-auto brightness-0 invert"
+            />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink-muted">
               Soluções de decoração sob medida, com curadoria de materiais, atendimento consultivo e instalação
               profissional.
