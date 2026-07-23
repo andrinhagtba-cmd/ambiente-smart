@@ -411,6 +411,14 @@ const SERVICES_ALL: Service[] = [
   },
 ];
 
+// Serviços temporariamente ocultos do site (reative removendo do set).
+const HIDDEN_SERVICE_SLUGS = new Set<string>(["tapetes", "boiserie"]);
+
+export const SERVICES: Service[] = SERVICES_ALL.filter(
+  (s) => !HIDDEN_SERVICE_SLUGS.has(s.slug),
+);
+
 export function getServiceBySlug(slug: string): Service | undefined {
   return SERVICES.find((s) => s.slug === slug);
 }
+
