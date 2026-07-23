@@ -176,19 +176,22 @@ function Index() {
               </Reveal>
             ))}
           </div>
-          <Reveal className="mt-14 border border-border bg-background p-8 md:flex md:items-center md:justify-between md:gap-8">
-            <div>
-              <h3 className="font-display text-2xl text-foreground">{SERVICES[6].name} sob medida</h3>
-              <p className="mt-1.5 max-w-xl text-sm text-muted-foreground">{SERVICES[6].cardDescription}</p>
-            </div>
-            <Link
-              to="/servicos/$slug"
-              params={{ slug: SERVICES[6].slug }}
-              className="btn btn-outline mt-6 md:mt-0 md:shrink-0"
-            >
-              Conhecer solução
-            </Link>
-          </Reveal>
+          {SERVICES[6] && (
+            <Reveal className="mt-14 border border-border bg-background p-8 md:flex md:items-center md:justify-between md:gap-8">
+              <div>
+                <h3 className="font-display text-2xl text-foreground">{SERVICES[6].name} sob medida</h3>
+                <p className="mt-1.5 max-w-xl text-sm text-muted-foreground">{SERVICES[6].cardDescription}</p>
+              </div>
+              <Link
+                to="/servicos/$slug"
+                params={{ slug: SERVICES[6].slug }}
+                className="btn btn-outline mt-6 md:mt-0 md:shrink-0"
+              >
+                Conhecer solução
+              </Link>
+            </Reveal>
+          )}
+
         </div>
       </section>
 
