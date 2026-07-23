@@ -41,7 +41,7 @@ export interface Service {
   hasMotorization?: boolean;
 }
 
-export const SERVICES: Service[] = [
+const SERVICES_ALL: Service[] = [
   {
     slug: "cortinas",
     name: "Cortinas",
